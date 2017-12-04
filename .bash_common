@@ -1,0 +1,16 @@
+## Setting HTTPS Proxy
+export HTTPS_PROXY=se10cbcsg01.org.nasdaqomx.com:8080
+
+alias ll='ls -la'
+
+alias jdk_ls="/usr/libexec/java_home -V 2>&1 | grep JavaVirtualMachines | head -2 | cut -d ',' -f 1 | sed 's/ //g'"
+
+function jdk_set() {
+    export JAVA_HOME=$(/usr/libexec/java_home -v $1)
+    export PATH=$JAVA_HOME/bin:$PATH
+    java -version
+}
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
