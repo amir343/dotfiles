@@ -1,3 +1,5 @@
+#!/bin/bash
+
 alias ll='ls -la'
 
 alias jdk_ls="/usr/libexec/java_home -V 2>&1 | grep JavaVirtualMachines | head -2 | cut -d ',' -f 1 | sed 's/ //g'"
